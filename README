@@ -1,6 +1,6 @@
 You can install Node.js anywhere, I installed mine in my user folder ( ~/ )
 
-Install Node.js with MySQL support
+Install Node.js with npm
 
 Mac
 git clone --depth 1 git://github.com/joyent/node.git
@@ -14,9 +14,8 @@ make install
 echo 'export PATH=$HOME/local/node/bin:$PATH' >> ~/.profile
 source ~/.profile
 curl http://npmjs.org/install.sh | sh
-cd ~/local/node/lib
-npm install mysql
 
-Windows (Not tested)
-Binary File: http://node-js.prcn.co.cc/
-NPM installed?
+To install Node.js modules using npm:
+
+cd /path/to/node_modules
+npm install <module>
