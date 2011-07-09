@@ -12,13 +12,13 @@ CREATE TABLE `NodeSample`.`MyTable` (
 Don't forget to update username (line 21) and password (line 22) to connect to MYSQL
 
  */
+require.paths.unshift(__dirname + '/node_modules'); //allow modules to be loaded from ./node_modules
 
-var sys = require('sys');
+var sys    = require('sys'),
+    Client = require('mysql').Client,
+    client = new Client();
 
-var Client = require('mysql').Client;
-var client = new Client();
-
-client.user = 'something';
+client.user     = 'something';
 client.password = 'something';
 
 console.log('Connecting to MySQL...');
